@@ -10,7 +10,14 @@ Udacity Class Project - Using GitHub on Python BikeShare Project
 Describe what your project is about and what it does
 
 ### Files used
-Include the files used
+This project uses the following files:
+bikeshare_2.py
+chicago.csv
+filter_data.py
+new_york_city.csv
+popular_times.py
+user_types.py
+washington.csv
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
