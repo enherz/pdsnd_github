@@ -104,7 +104,7 @@ def time_stats(df,month,day):
         # display the most common month
         df['month'] = df['Start Time'].dt.month
         popular_month = df['month'].mode()[0]
-        print('Most Popular Month:', popular_month)
+        print('Most Popular Month: {}'.format(popular_month))
 
     # display the most common day of week
     if day == 'all':
