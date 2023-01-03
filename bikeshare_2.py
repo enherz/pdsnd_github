@@ -110,7 +110,7 @@ def time_stats(df,month,day):
     if day == 'all':
         df['weekday'] = df['Start Time'].dt.weekday
         popular_day = df['weekday'].mode()[0]
-        print('Most Popular Day:', popular_day)
+        print('Most Popular Day: {}'.format(popular_day))
 
     # display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
