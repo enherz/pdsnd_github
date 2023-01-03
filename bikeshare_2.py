@@ -221,6 +221,7 @@ def show_raw_data(df):
 
 
 def main():
+    """The "main" function that calls all of the subfunctions in this script"""
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
