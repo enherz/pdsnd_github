@@ -104,7 +104,7 @@ def time_stats(df,month,day):
         # display the most common month
         df['month'] = df['Start Time'].dt.month
         popular_month = df['month'].mode()[0]
-        print('Most Popular Month:', popular_month)
+        print('Most Popular Month: {}'.format(popular_month))
 
     # display the most common day of week
     if day == 'all':
@@ -156,7 +156,7 @@ def trip_duration_stats(df):
     # display total travel time
     travel_time = pd.to_datetime(df['End Time']) - pd.to_datetime(df['Start Time'])
     tot_time = sum(travel_time.dt.total_seconds()) / 60
-    print('The total travel time is : ',tot_time, ' minutes')
+    print('The total travel time is : {} minutes'.format(tot_time))
 
     # display mean travel time
     avg_trav_time = travel_time.mean()
@@ -200,7 +200,7 @@ def user_stats(df,city):
     print('-'*40)
 
 def show_raw_data(df):
-"""Displays raw trip data for individual trips per user input"""
+
     raw_data = 'yes'
     indx = 0
     while raw_data == 'yes':
@@ -221,7 +221,6 @@ def show_raw_data(df):
 
 
 def main():
-    """The "main" function that calls all of the subfunctions in this script"""
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
