@@ -21,6 +21,7 @@ def get_filters():
     is_city_valid = False
     while is_city_valid == False:
         city = input("Please enter the city you would like to view data for: ").lower()
+        #the is_city_valid variable will become True if the city entered is one of the three that we have data for
         if city in CITY_DATA:
             is_city_valid = True
         else:
